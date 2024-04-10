@@ -109,7 +109,7 @@ export function AttendeeList(){
             <div className="flex gap-3 items-center">
                 <h1 className="text-2xl font-bold">Participantes</h1>
                 <div className="px-3 w-72 flex gap-3 items-center py-1.5 border border-white/10 rounded-lg ">
-                    <Search className="size-4 text-emerald-300" />
+                    <Search className="size-4 text-green-400" />
                     <input 
                     onChange={onSearchInputChanged} 
                     value={search}
@@ -123,7 +123,9 @@ export function AttendeeList(){
                 <thead>
                     <tr className="border-b border-white/10">
                         <TableHeader style={{ width: 48 }} >
-                            <input type="checkbox" className="h-auto size-4 bg-black/20 accent-orange-400 rounded border border-white/10" />
+                            <input 
+                            type="checkbox" 
+                            className="h-auto size-4 bg-black/20 accent-green-400 rounded border border-white/10" />
                         </TableHeader>
                         <TableHeader>Código</TableHeader>
                         <TableHeader>Participante</TableHeader>
@@ -137,7 +139,9 @@ export function AttendeeList(){
                         return (
                             <TableRow key={attendee.id}>
                                 <TableCell>
-                                    <input type="checkbox" className="size-4 bg-black/20 checked:bg-orange-400 rounded border border-white/10" />
+                                    <input 
+                                    type="checkbox" 
+                                    className="size-4 bg-black/20 checked:bg-green-400 rounded border border-white/10" />
                                 </TableCell>
                                 <TableCell>{attendee.id}</TableCell>
                                 <TableCell>
