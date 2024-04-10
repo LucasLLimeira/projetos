@@ -44,7 +44,7 @@ export function Credential({data, onChanceAvatar,onExpandQRCode}: Props){
             className="w-24 h-52 z-10"
             />
 
-            <View className="bg-black/20 self-stretch items-center
+            <View className="bg-green-500/70 self-stretch items-center
             pb-6 border border-white/10 mx3 rounded-2xl -mt-5">
                 <ImageBackground 
                 source={require("@/assets/ticket/header.png")}

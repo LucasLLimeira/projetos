@@ -53,7 +53,7 @@ export default function Ticket(){
     }
 
     return(
-        <View className="flex-1 bg-green-500">
+        <View className="flex-1 bg-black">
             <StatusBar barStyle="light-content" />
             <Header title="Minha Credencial" />
 

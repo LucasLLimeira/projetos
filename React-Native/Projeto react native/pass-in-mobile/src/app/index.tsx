@@ -41,11 +41,11 @@ export default function Home() {
     }
 
     return (
-        <View className="bg-green-500 flex-1 items-center justify-center">
+        <View className="bg-black flex-1 items-center justify-center">
             <StatusBar barStyle="light-content" />
             <Image 
             source={require("@/assets/logo.png")} 
-            className="h-16" 
+            className="h-10" 
             resizeMode="contain" />
             <View className="w-full p-8 mt-2 gap-3">
                 <Input>
