@@ -2,7 +2,17 @@ post http://localhost:3333/events
 Content-Type: application/json
 
 {
-    "title": "Unite Summit",
-    "details": "Um evento para quem é apaixonado por programação",
-    "maximumAttendees": 100
+    "title": "Novo evento 2",
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+post http://localhost:3333/events/05d68ecf-09e8-4fe2-85ec-48a88d695876/attendees
+Content-Type: application/json
+
+{
+    "name": "Lucas Limeira",
+    "email": "lucasdllimeira2@hotmail.com"
 }
