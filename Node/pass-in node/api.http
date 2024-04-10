@@ -16,3 +16,11 @@ Content-Type: application/json
     "name": "Lucas Limeira",
     "email": "lucasdllimeira2@hotmail.com"
 }
+
+###
+
+GET http://localhost:3333/events/05d68ecf-09e8-4fe2-85ec-48a88d695876
+
+###
+
+GET http://localhost:3333/attendees/3/badge
