@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { Eventos } from "./tabs/eventos";
+import { Participantes } from "./tabs/participantes";
+import thumbnsil_chosen from "../src/assets/thumbnail_chosen-logo.svg";
+import { NavLink } from "./components/nav-link";
 
-function App() {
-  const [count, setCount] = useState(0)
+type Aba = "eventos" | "participantes";
+
+export function App() {
+  const [abaSelecionada, setAbaSelecionada] = useState<Aba>("eventos");
+
+  const handleAbaSelecionada = (aba: Aba) => {
+    setAbaSelecionada(aba);};
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="max-w-[1216px] bg-black text-white mx-auto py-5 flex-col gap-5">
+      <div className="flex items-center gap-5 py-2">
+      <img src={thumbnsil_chosen} />
+        <nav className="flex items-center gap-5">
+          <NavLink
+            className={abaSelecionada === "eventos" ? "selected" : ""}
+            onClick={() => handleAbaSelecionada("eventos")}
+          >
+            Eventos
+          </NavLink>
+          <NavLink
+            className={abaSelecionada === "participantes" ? "selected" : ""}
+            onClick={() => handleAbaSelecionada("participantes")}
+          >
+            Participantes
+          </NavLink>
+        </nav>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      {abaSelecionada === "eventos" ? <Eventos /> : <Participantes />}
+    </div>
+      
   )
 }
-
-export default App
